@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oders",
+  "info": {
+    "singularName": "oder",
+    "pluralName": "oders",
+    "displayName": "Oder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "string",
+      "required": false
+    },
+    "orderDate": {
+      "type": "date"
+    },
+    "orderStatus": {
+      "type": "string"
+    },
+    "orderId": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

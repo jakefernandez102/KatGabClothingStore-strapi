@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categoryName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "categoryUrl": {
+      "type": "uid",
+      "targetField": "categoryName",
+      "required": true
+    },
+    "categoryDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "sub_categories_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-category.sub-category",
+      "mappedBy": "category_id"
+    }
+  }
+}
